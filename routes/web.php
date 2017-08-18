@@ -11,6 +11,14 @@
 |
 */
 
+use Modules\CoreHelper\Http\Controllers\DateController;
+
 Route::get('/', function () {
+
+
+    $date = DateController::date_to_mysql('17/08/2017');
+
+    dd($date);
+
     return view('welcome');
 });

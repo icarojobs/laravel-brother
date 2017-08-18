@@ -1,0 +1,15 @@
+{
+    "name": "icarojobs/corehelper",
+    "description": "",
+    "authors": [
+        {
+            "name": "Icaro Jobs",
+            "email": "icarowilliam@me.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Modules\\CoreHelper\\": ""
+        }
+    }
+}
