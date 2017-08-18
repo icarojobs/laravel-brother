@@ -13,14 +13,17 @@
 
 use Modules\CoreHelper\Http\Controllers\DateController;
 use Modules\CoreHelper\Http\Controllers\MoneyController;
+use Modules\CoreHelper\Http\Controllers\StringController;
 
 Route::get('/', function () {
 
 
     //$date = DateController::date_to_mysql('17/08/2017');
-    $money = MoneyController::money_to_br('350.45');
+//    $money = MoneyController::money_to_br('350.45');
 
-    dd($money);
+    $string = StringController::clear_string("É mano, remove essa ação pra nóis");
+
+    dd($string);
 
     return view('welcome');
 });

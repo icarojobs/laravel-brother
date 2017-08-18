@@ -12,7 +12,7 @@ class MoneyController extends Controller
      *
      * Method to convert brazilian money american money
      *
-     * @param date
+     * @param currency
      *
      */
     public static function money_to_us($value, $return_type = 'double'){
@@ -47,7 +47,7 @@ class MoneyController extends Controller
      *
      * Method to convert american money brazilian money
      *
-     * @param date
+     * @param currency
      *
      */
     public static function money_to_br($value, $return_type = 'double'){

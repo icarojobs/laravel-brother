@@ -30,3 +30,8 @@ use Modules\CoreHelper\Http\Controllers\MoneyController;
 usage: $money = MoneyController::money_to_us('350,45');
 
 usage: $money = MoneyController::money_to_br('350.45');
+
+# String Helper
+use Modules\CoreHelper\Http\Controllers\StringController;
+
+usage: $string = StringController::clear_string("É mano, remove essa ação pra nóis");
