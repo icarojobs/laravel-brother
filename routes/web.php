@@ -12,13 +12,15 @@
 */
 
 use Modules\CoreHelper\Http\Controllers\DateController;
+use Modules\CoreHelper\Http\Controllers\MoneyController;
 
 Route::get('/', function () {
 
 
-    $date = DateController::date_to_mysql('17/08/2017');
+    //$date = DateController::date_to_mysql('17/08/2017');
+    $money = MoneyController::money_to_br('350.45');
 
-    dd($date);
+    dd($money);
 
     return view('welcome');
 });

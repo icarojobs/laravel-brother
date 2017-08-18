@@ -1,7 +1,7 @@
 # laravel-brother
 The most complete package to help you in everyone project
 
-# dependencies
+# Dependencies
 https://github.com/nWidart/laravel-modules
 
 Change composer.json of root to:
@@ -11,15 +11,22 @@ Change composer.json of root to:
              "Modules\\" : "Modules/"
          }
 
-# modules
+# Modules
 CoreHelper: Contain many helper functions. eg: Date helpers, Money helpers, etc
 
-Date Helper:
+# Date Helper:
 use Modules\CoreHelper\Http\Controllers\DateController;
 
 usage:
-$date = DateController::mysql_to_date('2017-08-17');
+$date = DateController::date_to_br('2017-08-17');
 
 
 usage:
-$date = DateController::date_to_mysql('17/08/2017');
+$date = DateController::date_to_us('17/08/2017');
+
+# Money Helper:
+use Modules\CoreHelper\Http\Controllers\MoneyController;
+
+usage: $money = MoneyController::money_to_us('350,45');
+
+usage: $money = MoneyController::money_to_br('350.45');

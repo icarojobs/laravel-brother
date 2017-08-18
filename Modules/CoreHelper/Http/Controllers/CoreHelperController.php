@@ -14,10 +14,6 @@ class CoreHelperController extends Controller
      */
     public function index()
     {
-        $date = DateController::mysql_to_date('2017-08-17');
-
-        dd($date);
-
         return view('corehelper::index');
     }
 

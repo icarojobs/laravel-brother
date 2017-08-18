@@ -16,7 +16,7 @@ class DateController extends Controller
      * @param date
      *
     */
-    public static function mysql_to_date($date){
+    public static function date_to_br($date){
         $date = substr($date, 0, 10);
 
         $data_array = explode('-', $date);
@@ -37,7 +37,7 @@ class DateController extends Controller
      * @param date
      *
      */
-    public static function date_to_mysql($date){
+    public static function date_to_us($date){
         $date = substr($date, 0, 10);
 
         $data_array = explode('/', $date);
