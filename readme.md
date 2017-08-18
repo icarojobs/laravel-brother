@@ -35,3 +35,10 @@ usage: $money = MoneyController::money_to_br('350.45');
 use Modules\CoreHelper\Http\Controllers\StringController;
 
 usage: $string = StringController::clear_string("É mano, remove essa ação pra nóis");
+
+# Validator Helper
+use Modules\CoreHelper\Http\Controllers\ValidatorController;
+
+usage: $cpf = ValidatorController::cpf_validate('322.867.222-51');
+
+usage: $cnpj = ValidatorController::cnpj_validate('75.305.113/0001-02');
