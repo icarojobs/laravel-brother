@@ -2,7 +2,9 @@
 The most complete package to help you in everyone project
 
 # Dependencies
-https://github.com/nWidart/laravel-modules
+Nwidat: https://github.com/nWidart/laravel-modules
+
+Guzzle: composer require guzzlehttp/guzzle
 
 Change composer.json of root to:
 
