@@ -76,5 +76,35 @@ $dados = [
     new SlackNotifications($dados);
 ```
 
+# Crud Restful (trait)
+```php
+use Modules\Crud\Http\Controllers\CrudControllerTrait;
+
+class MyRestfulController extends Controller
+{
+    use CrudControllerTrait;
+
+    protected $model;
+
+    public function __construct(\App\Models\User $model)
+    {
+        $this->model = $model;
+    }
+
+    public function index(Request $request)
+    {
+
+        // Get specific user
+        // $user = $this->show(1);
+        // $userObject = json_decode( $user->content() , false);
+        // dd($userObject->name);
+
+        // Get all users
+        // $users = $this->all($request);
+        // $usersObject = json_decode( $users->content(), false );
+        // dd($usersObject->data);
+    }
+}
+```
     
 * Author: Icaro Jobs < icarowilliam@me.com >   
