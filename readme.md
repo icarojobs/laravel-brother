@@ -12,35 +12,69 @@ Change composer.json of root to:
              "App\\": "app/",
              "Modules\\" : "Modules/"
          }
+         
+PS: After install and configure above settings, open the root composer.json and add this path to psr-4:
+```
+"psr-4": {
+            "App\\": "app/",
+            "Modules\\" : "Modules/",
+            "Modules\\CoreHelper\\": "vendor/icarojobs/corehelper"
+        }
+```        
 
 # Modules
-CoreHelper: Contain many helper functions. eg: Date helpers, Money helpers, etc
+CoreHelper: Contain many helper functions. 
+* Date helpers
+* Money helpers
+* String helpers
+* Slack notifications helpers
 
 # Date Helper:
+```php
 use Modules\CoreHelper\Http\Controllers\DateController;
-
-usage:
 $date = DateController::date_to_br('2017-08-17');
-
-
-usage:
 $date = DateController::date_to_us('17/08/2017');
+```
 
 # Money Helper:
+```php
 use Modules\CoreHelper\Http\Controllers\MoneyController;
 
-usage: $money = MoneyController::money_to_us('350,45');
+$money = MoneyController::money_to_us('350,45');
 
-usage: $money = MoneyController::money_to_br('350.45');
+$money = MoneyController::money_to_br('350.45');
+```
 
 # String Helper
+```php
 use Modules\CoreHelper\Http\Controllers\StringController;
 
-usage: $string = StringController::clear_string("É mano, remove essa ação pra nóis");
+$string = StringController::clear_string("É mano, remove essa ação pra nóis");
+```
 
 # Validator Helper
+```php
 use Modules\CoreHelper\Http\Controllers\ValidatorController;
 
-usage: $cpf = ValidatorController::cpf_validate('322.867.222-51');
+$cpf = ValidatorController::cpf_validate('322.867.222-51');
 
-usage: $cnpj = ValidatorController::cnpj_validate('75.305.113/0001-02');
+$cnpj = ValidatorController::cnpj_validate('75.305.113/0001-02');
+```
+
+
+# Slack Notifications
+```php
+use Modules\CoreHelper\Notifications\SlackNotifications;
+
+$dados = [
+        'channel'   =>  '#notifications',
+        'from'      =>  'MOB2YOU Notifications',
+        'emoji'     =>  ':mob2you:', // :ghost: , etc...
+        'message'   =>  'First Test Slack Notification 3'
+    ];
+
+    new SlackNotifications($dados);
+```
+
+    
+* Author: Icaro Jobs < icarowilliam@me.com >   
