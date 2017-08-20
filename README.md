@@ -112,7 +112,7 @@ In Terminal, run:
 
 $ sudo crontab -e
 
-[ press i to inset mode ]
+[ press i to insert mode ]
 
 * * * * * php /path-to-laravel-project/artisan schedule:run >> /dev/null 2>&1
 
