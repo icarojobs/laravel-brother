@@ -106,4 +106,24 @@ class MyRestfulController extends Controller
 }
 ```
     
+# Setting Crontab / Cronjob / Laravel Tasks
+```
+In Terminal, run:
+
+$ sudo crontab -e
+
+[ press i to inset mode ]
+
+* * * * * php /path-to-laravel-project/artisan schedule:run >> /dev/null 2>&1
+
+[ press ESC ]
+[ press wq! to save and exit ]
+
+You should see the following message: crontab: installing new crontab. 
+You can verify the crontab file by using:
+
+$ sudo crontab -l
+
+```    
+    
 * Author: Icaro Jobs < icarowilliam@me.com >   
