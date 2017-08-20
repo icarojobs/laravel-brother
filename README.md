@@ -2,25 +2,24 @@
 The most complete package to help you in everyone project
 
 # Dependencies
-Nwidat: https://github.com/nWidart/laravel-modules
+Nwidat:
+```
+composer require nwidart/laravel-modules
+```
 
-Guzzle: composer require guzzlehttp/guzzle
+Guzzle: 
+```
+composer require guzzlehttp/guzzle
+```
 
 Change composer.json of root to:
-
- "psr-4": {
-             "App\\": "app/",
-             "Modules\\" : "Modules/"
-         }
-         
-PS: After install and configure above settings, open the root composer.json and add this path to psr-4:
 ```
 "psr-4": {
             "App\\": "app/",
             "Modules\\" : "Modules/",
             "Modules\\CoreHelper\\": "vendor/icarojobs/corehelper"
         }
-```        
+```       
 
 # Modules
 CoreHelper: Contain many helper functions. 
